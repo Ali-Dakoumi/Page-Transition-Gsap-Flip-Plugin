@@ -2,7 +2,7 @@
 
 This is a simple project using barba JS to make creative page transitions.
 
-Check it out here : https://aliidak.github.io/Page-Transition-Gsap-Flip-Plugin/
+Check it out here : https://ali-dakoumi.github.io/Page-Transition-Gsap-Flip-Plugin/
 
 I used some other libraries for animations and smooth scroll:
 
