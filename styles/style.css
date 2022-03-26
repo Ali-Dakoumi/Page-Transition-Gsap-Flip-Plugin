@@ -92,18 +92,34 @@ body {
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
+.text-wrapper {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .hometitle {
-  position: absolute;
   color: antiquewhite;
   font-size: 5rem;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  text-align: center;
 }
 
 .ml6 {
   font-weight: 900;
   font-size: 3.3em;
+}
+
+@media (max-width: 776px) {
+  .ml6 {
+    font-size: 2rem;
+  }
 }
 
 .ml6 .text-wrapper {
@@ -151,6 +167,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 776px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .itemcontainer {

@@ -1,3 +1,8 @@
+@mixin mobile {
+  @media (max-width: 776px) {
+    @content;
+  }
+}
 .imagecontainer {
   width: 100vw;
   height: 100vh;
@@ -16,6 +21,9 @@
   transform: translate(-50%, -50%);
   font-size: 9rem;
   opacity: 1;
+  @include mobile {
+    font-size: 4rem;
+  }
 }
 .textcontainer {
   height: 100vh;
