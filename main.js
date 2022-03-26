@@ -57,7 +57,7 @@ const functionA = (container) => {
   about.classList.add("bigimage");
 
   return Flip.fit(about, ".fullscreen", {
-    duration: 1,
+    duration: 5,
     ease: Expo.easeInOut,
     absolute: true,
     clearProps: "all",
@@ -67,7 +67,7 @@ const functionC = (container) => {
   const contact = document.querySelector(".contact");
   contact.classList.add("bigimage");
   return Flip.fit(contact, ".fullscreen", {
-    duration: 1,
+    duration: 5,
     ease: Expo.easeInOut,
   });
 };
@@ -75,7 +75,7 @@ const functionS = (container) => {
   const services = document.querySelector(".services");
   services.classList.add("bigimage");
   return Flip.fit(services, ".fullscreen", {
-    duration: 1,
+    duration: 5,
     ease: Expo.easeInOut,
   });
 };
@@ -121,14 +121,27 @@ const leaveAnimationAbout = (container) => {
   });
 };
 
-const select = (e) => document.querySelector(e);
-let bodyScrollBar;
-
 function initSmoothScrollbar() {
-  bodyScrollBar = Scrollbar.init(select("#viewport"), { damping: 0.04 });
+  bodyScrollBar = Scrollbar.init(document.querySelector("#viewport"), {
+    damping: 0.04,
+  });
   // remove horizontal scrollbar
   bodyScrollBar.track.xAxis.element.remove();
 }
+
+bodyScrollBar = Scrollbar.init(document.querySelector("#viewport"), {
+  damping: 0.04,
+});
+function fixed(params) {
+  const fixedElem = document.getElementsByClassName("fullscreen")[0];
+
+  bodyScrollBar.addListener((status) => {
+    const offset = status.offset;
+
+    fixedElem.style.top = offset.y + "px";
+  });
+}
+
 barba.hooks.after(() => {
   const ml6 = document.querySelectorAll(".ml6 .letter");
   bodyScrollBar.update();
@@ -174,7 +187,9 @@ barba.init({
     },
     {
       namespace: "home",
-      afterEnter(data) {},
+      afterEnter(data) {
+        fixed();
+      },
     },
   ],
   transitions: [

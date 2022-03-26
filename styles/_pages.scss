@@ -4,8 +4,8 @@
   }
 }
 .imagecontainer {
-  width: 100vw;
   height: 100vh;
+  width: 100vw;
   overflow: hidden;
   position: relative;
 }
@@ -22,7 +22,7 @@
   font-size: 9rem;
   opacity: 1;
   @include mobile {
-    font-size: 4rem;
+    font-size: 2rem;
   }
 }
 .textcontainer {
@@ -32,7 +32,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 10rem 20rem;
+  padding: 1rem 2rem;
 }
 .about,
 .services,
