@@ -43,3 +43,46 @@
 .about .textcontainer > * {
   margin: 1rem;
 }
+.homelink {
+  width: 100vw;
+  height: 20vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  mix-blend-mode: difference;
+}
+.homelink a {
+  color: white;
+  text-decoration: underline;
+  text-align: center;
+  font-size: 1.8rem;
+  @include mobile {
+    font-size: 1rem;
+  }
+}
+
+.scrolldown {
+  width: 100vw;
+  height: 20vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  mix-blend-mode: overlay;
+}
+.scrolldown h1 {
+  color: white;
+  text-decoration: underline;
+  text-align: center;
+  font-size: 1.8rem;
+  @include mobile {
+    font-size: 1rem;
+  }
+}

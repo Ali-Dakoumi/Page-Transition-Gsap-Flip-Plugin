@@ -57,7 +57,7 @@ const functionA = (container) => {
   about.classList.add("bigimage");
 
   return Flip.fit(about, ".fullscreen", {
-    duration: 5,
+    duration: 1,
     ease: Expo.easeInOut,
     absolute: true,
     clearProps: "all",
@@ -67,7 +67,7 @@ const functionC = (container) => {
   const contact = document.querySelector(".contact");
   contact.classList.add("bigimage");
   return Flip.fit(contact, ".fullscreen", {
-    duration: 5,
+    duration: 1,
     ease: Expo.easeInOut,
   });
 };
@@ -75,7 +75,7 @@ const functionS = (container) => {
   const services = document.querySelector(".services");
   services.classList.add("bigimage");
   return Flip.fit(services, ".fullscreen", {
-    duration: 5,
+    duration: 1,
     ease: Expo.easeInOut,
   });
 };
@@ -116,8 +116,8 @@ const leaveAnimation = (container) => {
   });
 };
 const leaveAnimationAbout = (container) => {
-  return gsap.to(".about", 0.3, {
-    opacity: 0,
+  return gsap.to(container, 0.6, {
+    autoAlpha: 0,
   });
 };
 
