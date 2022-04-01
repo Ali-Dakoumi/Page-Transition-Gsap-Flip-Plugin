@@ -236,7 +236,9 @@ body {
   align-items: center;
   padding: 1rem 2rem;
 }
-
+#item {
+  z-index: 999;
+}
 .about,
 .services,
 .contact {
