@@ -17,9 +17,9 @@ function homeEnter(container) {
 const leavingHome = (container) => {
   const state = Flip.getState(img);
   return Flip.fit(img, ".fullscreen", {
-    duration: 3,
+    duration: 6,
     ease: Expo.easeInOut,
-    absolute: true,
+    absolute: false,
     clearProps: "all",
   });
 };
