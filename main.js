@@ -142,7 +142,7 @@ barba.init({
         (img.parentNode === item ? fullscreen : item).appendChild(img);
         Flip.fit(img, ".item", {
           duration: 1,
-          ease: Power4.easeInOut,
+          ease: Expo.easeInOut,
           absolute: true,
           clearProps: "all",
         });

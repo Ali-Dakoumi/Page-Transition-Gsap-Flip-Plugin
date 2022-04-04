@@ -257,7 +257,9 @@ body {
 .about .textcontainer > * {
   margin: 1rem;
 }
-
+.textcontainer {
+  padding: 15rem;
+}
 .homelink {
   width: 100vw;
   height: 20vh;
