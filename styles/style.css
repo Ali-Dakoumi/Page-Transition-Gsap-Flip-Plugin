@@ -1,3 +1,11 @@
+.fullScreened {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -29,16 +37,13 @@ body {
 }
 
 .two {
-  z-index: 10;
+  z-index: -1;
+  opacity: 0;
 }
-
-.fullscreenwrapper {
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
+.top {
+  opacity: 1;
+  position: absolute;
+  z-index: 10000000000000000000000000;
 }
 
 .fullscreen {
@@ -48,7 +53,8 @@ body {
   top: 0 !important;
   bottom: 0;
   right: 0;
-  z-index: -1;
+  z-index: 100;
+  pointer-events: none;
 }
 
 .fullscreen > * {
@@ -68,8 +74,8 @@ body {
   transform: none;
 }
 
-.fake {
-  opacity: 1;
+.front {
+  opacity: 9999;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
@@ -314,4 +320,20 @@ body {
   .scrolldown h1 {
     font-size: 1rem;
   }
+}
+#viewport {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+#viewtwo {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
